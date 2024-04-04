@@ -20,7 +20,7 @@ async function coraToken(request, response) {
     .then((jsonFormat) => response.json(jsonFormat))
     .catch((error) => {
       console.error("Erro ao fazer a solicitação:", error);
-      response.json(error);
+      response.json(error.response);
     });
 
   // If you want to save the response in cache and perform your endpoint - in 10 seconds, versel make other request and put in the cache - your website never going to crash -> just for generic responses endpoints. Not my case
