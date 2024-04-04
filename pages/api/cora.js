@@ -1,7 +1,6 @@
 import axios from "axios";
 const https = require("https");
 const fs = require("fs");
-const path = require("path");
 
 async function coraToken(request, response) {
 
@@ -11,9 +10,9 @@ async function coraToken(request, response) {
   // const key = "./keys/private-key.key";
   // const url = "https://matls-clients.api.stage.cora.com.br/token";
 
-  const cert = fs.readFileSync(path.resolve('cora/keys/certificate.pem'));
+  const cert = fs.readFileSync(__dirname + "../../keys/certificate.pem");
 
-  const key = fs.readFileSync(path.resolve('cora/keys/private-key.key'));
+  const key = fs.readFileSync(__dirname + "../../keys/private-key.key");
 
   const url = "https://matls-clients.api.stage.cora.com.br/token";
 
