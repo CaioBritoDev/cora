@@ -1,9 +1,13 @@
 function coraToken(request, response) {
-  const dynamicDate = new Date();
+
+  const apiSecret = process.env.API_SECRET
+  const dynamicDate = new Date().toDateString();
 
   response.json({
-    time: dynamicDate
+    time: dynamicDate,
+    secret: apiSecret
   });
+  
 }
 
 export default coraToken;
