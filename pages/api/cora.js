@@ -10,8 +10,7 @@ async function coraToken(request, response) {
   const url = "https://matls-clients.api.stage.cora.com.br/token";
   const params = `grant_type=client_credentials&client_id=${apiSecret}`;
 
-  await axios
-    .post(url, params, {
+  axios.post(url, params, {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
         cert: cert,
