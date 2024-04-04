@@ -11,11 +11,11 @@ async function coraToken(request, response) {
 
   
   const cert = fs.readFileSync(
-    "/Users/caiof/OneDrive/Documentos/cora/keys/certificate.pem",
+    "./keys/certificate.pem",
     {encoding: "utf-8"}
   );
   const key =  fs.readFileSync(
-    "/Users/caiof/OneDrive/Documentos/cora/keys/private-key.key",
+    "./keys/private-key.key",
     {encoding: "utf-8"}
   );
   const url = "https://matls-clients.api.stage.cora.com.br/token";
