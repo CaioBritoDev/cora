@@ -9,16 +9,12 @@ async function coraToken(request, response) {
   // const key = "./keys/private-key.key";
   // const url = "https://matls-clients.api.stage.cora.com.br/token";
 
-  
-  const cert = //fs.readFileSync(
-    "./keys/certificate.pem"
-    //{encoding: "utf-8"}
-  //);
-  const key =  //fs.readFileSync(
-    "./keys/private-key.key"
-    //{encoding: "utf-8"}
-  //);
+  const cert = "/Users/caiof/OneDrive/Documentos/cert_key_cora_stage_2024_04_02/certificate.pem";
+
+  const key = "/Users/caiof/OneDrive/Documentos/cert_key_cora_stage_2024_04_02/private-key.key";
+
   const url = "https://matls-clients.api.stage.cora.com.br/token";
+
   const params = new URLSearchParams({
     grant_type: "client_credentials",
     client_id: apiSecret,
@@ -39,13 +35,13 @@ async function coraToken(request, response) {
     })
     .then((res) => {
       response.json({
-        data: res.data
-      })
+        data: res.data,
+      });
     })
     .catch((error) => {
       response.json({
-        err: error
-      })
+        err: error,
+      });
     });
 
   // If you want to save the response in cache and perform your endpoint - in 10 seconds, versel make other request and put in the cache - your website never going to crash -> just for generic responses endpoints. Not my case
