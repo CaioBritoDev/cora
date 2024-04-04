@@ -10,11 +10,9 @@ async function coraToken(request, response) {
   // const key = "./keys/private-key.key";
   // const url = "https://matls-clients.api.stage.cora.com.br/token";
 
-  const cert =
-    "/Users/caiof/OneDrive/Documentos/cert_key_cora_stage_2024_04_02/certificate.pem";
+  const cert = fs.readFileSync("/../../keys/certificate.pem");
 
-  const key =
-    "/Users/caiof/OneDrive/Documentos/cert_key_cora_stage_2024_04_02/private-key.key";
+  const key = fs.readFileSync("/../../keys/private-key.key");
 
   const url = "https://matls-clients.api.stage.cora.com.br/token";
 
@@ -84,7 +82,7 @@ async function coraToken(request, response) {
 
   // If you want to save the response in cache and perform your endpoint - in 10 seconds, versel make other request and put in the cache - your website never going to crash -> just for generic responses endpoints. Not my case
   // response.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate')
-  
+
 }
 
 export default coraToken;
