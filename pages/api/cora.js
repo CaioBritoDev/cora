@@ -10,12 +10,14 @@ async function coraToken(request, response) {
   // const url = "https://matls-clients.api.stage.cora.com.br/token";
 
   
-  const cert = //fs.readFileSync(
-    "/Users/caiof/OneDrive/Documentos/cora/keys/certificate.pem"
-  //);
-  const key = //fs.readFileSync(
-    "/Users/caiof/OneDrive/Documentos/cora/keys/private-key.key"
-  //);
+  const cert = fs.readFileSync(
+    "/Users/caiof/OneDrive/Documentos/cora/keys/certificate.pem",
+    {encoding: "utf-8"}
+  );
+  const key =  fs.readFileSync(
+    "/Users/caiof/OneDrive/Documentos/cora/keys/private-key.key",
+    {encoding: "utf-8"}
+  );
   const url = "https://matls-clients.api.stage.cora.com.br/token";
   const params = new URLSearchParams({
     grant_type: "client_credentials",
@@ -33,7 +35,7 @@ async function coraToken(request, response) {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       httpsAgent: agent,
-      withCredentials: true
+      //withCredentials: true
     })
     .then((res) => {
       response.json({
