@@ -10,14 +10,14 @@ async function coraToken(request, response) {
   // const url = "https://matls-clients.api.stage.cora.com.br/token";
 
   
-  const cert = fs.readFileSync(
-    "./keys/certificate.pem",
-    {encoding: "utf-8"}
-  );
-  const key =  fs.readFileSync(
-    "./keys/private-key.key",
-    {encoding: "utf-8"}
-  );
+  const cert = //fs.readFileSync(
+    "./keys/certificate.pem"
+    //{encoding: "utf-8"}
+  //);
+  const key =  //fs.readFileSync(
+    "./keys/private-key.key"
+    //{encoding: "utf-8"}
+  //);
   const url = "https://matls-clients.api.stage.cora.com.br/token";
   const params = new URLSearchParams({
     grant_type: "client_credentials",
