@@ -33,6 +33,7 @@ async function coraToken(request, response) {
         "Content-Type": "application/x-www-form-urlencoded",
       },
       httpsAgent: agent,
+      withCredentials: true
     })
     .then((res) => {
       response.json(res.data)
