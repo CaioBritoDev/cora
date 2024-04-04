@@ -5,8 +5,8 @@ async function coraToken(request, response) {
   const axios = require("axios");
   const fs = require("fs");
 
-  const cert = "/Users/caiof/OneDrive/Documentos/cora/certificate.pem";
-  const key = "/Users/caiof/OneDrive/Documentos/cora/private-key.key";
+  const cert = "/Users/caiof/OneDrive/Documentos/cora/keys/certificate.pem";
+  const key = "/Users/caiof/OneDrive/Documentos/cora/keys/private-key.key";
   const url = "https://matls-clients.api.stage.cora.com.br/token";
   const params = `grant_type=client_credentials&client_id=${apiSecret}`;
 
