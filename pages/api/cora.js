@@ -1,9 +1,8 @@
+import axios from "axios";
+
 async function coraToken(request, response) {
 
   const apiSecret = process.env.CLIENT_ID_STAGE; // In vercel, no possible to access in localhost
-
-  const axios = require("axios");
-  const fs = require("fs");
 
   const cert = "./keys/certificate.pem";
   const key = "./keys/private-key.key";
